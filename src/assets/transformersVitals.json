@@ -1,0 +1,68 @@
+[
+    {
+        "ID": 1,
+        "strength": 2,
+        "endurance": 3,
+        "firepower": 4,
+        "intelligence": 6,
+        "rank": 7,
+        "skill": 6,
+        "speed": 8,
+        "courage": 5
+    },
+    {
+        "ID": 2,
+        "strength": 5,
+        "endurance": 3,
+        "firepower": 7,
+        "intelligence": 2,
+        "rank": 2,
+        "skill": 6,
+        "speed": 8,
+        "courage": 6
+    },
+    {
+        "ID": 3,
+        "strength": 4,
+        "endurance": 6,
+        "firepower": 8,
+        "intelligence": 3,
+        "rank": 8,
+        "skill": 6,
+        "speed": 2,
+        "courage": 9
+    },
+    {
+        "ID": 4,
+        "strength": 6,
+        "endurance": 2,
+        "firepower": 7,
+        "intelligence": 2,
+        "rank": 3,
+        "skill": 2,
+        "speed": 7,
+        "courage": 7
+    },
+    {
+        "ID": 5,
+        "strength": 2,
+        "endurance": 8,
+        "firepower": 6,
+        "intelligence": 5,
+        "rank": 4,
+        "skill": 4,
+        "speed": 2,
+        "courage": 4
+    },
+    {
+        "ID": 6,
+        "strength": 2,
+        "endurance": 3,
+        "firepower": 5,
+        "intelligence": 7,
+        "rank": 5,
+        "skill": 8,
+        "speed": 7,
+        "courage": 9
+    }
+]

@@ -1,0 +1,73 @@
+<div>
+
+  <h2 style="color: grey;">Outcome :</h2>
+  <mat-card style="color:green; background-color: lightblue; border-color: navy; border-width: 10px;">
+    {{fights}} battle <br />
+    Winning team : <b> {{winnerGroup}} </b><br />
+    Survivors :
+  </mat-card>
+
+  <h2 style="color: grey;">Fight Details :</h2>
+  <mat-divider></mat-divider>
+  <table style="background-color:grey;">
+    <tr *ngFor="let bot of battle; let i=index">
+      <td>
+        <mat-card>
+          <mat-card-header style="padding:0%">
+            <div mat-card-avatar>
+              <img class="png-icon" src="./assets/icon/autobots.png">
+            </div>
+            <mat-card-title>{{bot.AutobotName|titlecase}}</mat-card-title>
+            <mat-card-subtitle>{{bot.AutobotVitals}}</mat-card-subtitle>
+          </mat-card-header>
+        </mat-card>
+      </td>
+      <td>
+        <mat-card>
+          <mat-card-header>
+            <div mat-card-avatar>
+              <img class="png-icon" src="./assets/icon/decepticon.png">
+            </div>
+            <mat-card-title>{{bot.DecepticonName|titlecase}}</mat-card-title>
+            <mat-card-subtitle>{{bot.DecepticonVitals}}</mat-card-subtitle>
+          </mat-card-header>
+        </mat-card>
+      </td>
+      <td>
+        <mat-card>
+          <mat-card-header>
+            <div mat-card-avatar>
+              <img class="png-icon" src="./assets/icon/winner-icon.png">
+            </div>
+            <mat-card-title> <b>{{bot.WinnerName|titlecase}}</b> </mat-card-title>
+            <mat-card-subtitle>Winner</mat-card-subtitle>
+          </mat-card-header>
+        </mat-card>
+      </td>
+      <td>
+        <mat-card style="padding: 0px; min-height: 88px;">          
+            <ul style="list-style: none; padding: 0px; vertical-align:middle;">
+              <li *ngFor="let eval of bot.evaluation |keyvalue">                
+                  <mat-icon style="font-size: 14px;" [ngStyle]="{color:(bot.evaluation[eval.key].Note)? 'green':'red'}">
+                    {{bot.evaluation[eval.key].Note ? 'check_circle' : 'highlight_off'}}
+                  </mat-icon>
+                  {{bot.evaluation[eval.key].Factor}}
+                
+              </li>
+            </ul>
+            <!-- <div *ngFor="let eval of bot.evaluation |keyvalue">
+              <mat-card-subtitle>
+                <mat-icon style="font-size: 14px;"
+                  [ngStyle]="{color:(bot.evaluation[eval.key].Note)? 'green':'red'}">
+                  {{bot.evaluation[eval.key].Note ? 'check_circle' : 'highlight_off'}}
+                </mat-icon>
+               {{bot.evaluation[eval.key].Factor}}
+              </mat-card-subtitle><br/> 
+            </div>-->
+         
+        </mat-card>
+      </td>
+    </tr>
+  </table>
+
+</div>

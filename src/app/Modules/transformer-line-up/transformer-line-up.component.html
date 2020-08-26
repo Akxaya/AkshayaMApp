@@ -1,0 +1,8 @@
+<div>
+    <mat-chip-list class="mat-chip-list-stacked">      
+        <mat-chip *ngFor="let bot of bots" selected="true" [color]="warn">
+          <div (click)="SelectedBot(bot.ID, bot.Type)">
+            <i class="fa fa-robot"></i> {{bot.Name}}</div>
+        </mat-chip>
+      </mat-chip-list> 
+</div>

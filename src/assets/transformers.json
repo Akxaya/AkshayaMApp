@@ -1,0 +1,32 @@
+[
+    {
+        "ID": 1,
+        "Name": "Optmus Prime",
+        "Type": "autobot"
+    },
+    {
+        "ID": 2,
+        "Name": "Wheeljack",
+        "Type": "autobot"
+    },
+    {
+        "ID": 3,
+        "Name": "Cliffjumper",
+        "Type": "autobot"
+    },
+    {
+        "ID": 4,
+        "Name": "MegaTron",
+        "Type": "Decepticon"
+    },
+    {
+        "ID": 5,
+        "Name": "Starscream",
+        "Type": "Decepticon"
+        },
+        {
+            "ID": 6,
+            "Name": "Skywarp",
+            "Type": "Decepticon"
+        }
+]

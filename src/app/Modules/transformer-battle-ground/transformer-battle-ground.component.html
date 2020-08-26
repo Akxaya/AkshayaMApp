@@ -1,0 +1,64 @@
+<div>
+        <mat-toolbar style="text-align: center;">
+                <i class="fa fa-android" style="color: yellowgreen;"></i> &nbsp; Transformer
+        </mat-toolbar>
+</div>
+<div class="container-fluid" style="width: 100%;">
+        <div class="row col-12">
+                <div class="col">
+                        <mat-card class="col-12 border border-primary">
+                                <mat-card-header>
+                                        <div mat-card-avatar >
+                                                <img class="png-icon" src="./assets/icon/autobots.png">
+                                        </div>
+                                        <mat-card-title>{{autobot|titlecase}}</mat-card-title>
+                                </mat-card-header>
+                                <mat-card-content>
+                                        <div class="row col-12">
+                                                <div class="col">
+                                                        <transformer-line-up [botType]="autobot"
+                                                                (BotSelected)="GetSelectedBot($event)">
+                                                        </transformer-line-up>
+                                                </div>
+                                                <div class="col">
+                                                        <transformer-vitals [Vitals]="AutoBotVitals"
+                                                                [BotName]="AutoBotName">
+                                                        </transformer-vitals>
+                                                </div>
+                                        </div>
+                                </mat-card-content>
+                        </mat-card>
+                </div>
+                <mat-divider [vertical]="true"></mat-divider>
+                <div class="col">
+                        <mat-card class="col-12 border border-danger">
+                                <mat-card-header>
+                                        <div mat-card-avatar >
+                                                <img class="png-icon" src="./assets/icon/decepticon.png">
+                                        </div>
+                                        <mat-card-title>{{Decepticon|titlecase}}</mat-card-title>
+                                        <mat-card-subtitle></mat-card-subtitle>
+                                </mat-card-header>
+                                <mat-card-content>
+                                        <div class="row col-12">
+                                                <div class="col">
+                                                        <transformer-vitals [Vitals]="DecepticonVitals"
+                                                                [BotName]="DecepticonName">
+                                                        </transformer-vitals>
+                                                </div>
+                                                <div class="col">
+                                                        <transformer-line-up [botType]="Decepticon"
+                                                                (BotSelected)="GetSelectedBot($event)">
+                                                        </transformer-line-up>
+                                                </div>
+                                        </div>
+                                </mat-card-content>
+                        </mat-card>
+                </div>
+        </div>
+        <mat-divider style="padding: 5px;"></mat-divider>
+        <div class="row col-12 d-flex justify-content-center mx-auto md-padding"><br/>
+                <mat-divider></mat-divider>
+                <button class="col-10 btn btn-warning" mat-button color="warn" (click)="fight()">Fight</button> 
+        </div>
+</div>

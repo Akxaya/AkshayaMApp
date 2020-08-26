@@ -1,0 +1,32 @@
+
+  <nav class="navbar navbar-dark bg-dark">
+    <div class="card highlight-card card-small">
+      <span>Developed By: {{ title }}</span>
+
+    </div>
+    <div class="btn-group btn-group-toggle d-flex justify-content-center data-toggle" buttons>
+      <label class="btn btn-secondary">
+        <input type="radio" name="options" id="option1" autocomplete="off" checked>
+        <a class="navbar-brand" href="/"> <i class="fa fa-address-card-o text-warning" aria-hidden="true"></i>
+          About me!
+        </a>
+      </label>
+     
+      <label class="btn btn-secondary">
+        <input type="radio" name="options" id="option1" autocomplete="off" checked>
+        <a class="navbar-brand" href="/castle"><i class="fa fa-fort-awesome" style="color:yellow"></i>
+          Castle
+        </a>
+      </label>
+      <label class="btn btn-secondary">
+        <input type="radio" name="options" id="option2" autocomplete="off">
+        <a class="navbar-brand" href="/transformer"><i class="fa fa-android" style="color:skyblue"></i>
+          Transformers
+        </a>
+      </label>
+    </div>
+  </nav>
+  <mat-divider></mat-divider>
+  <div class="col-12" role="main">
+    <router-outlet></router-outlet>
+  </div>

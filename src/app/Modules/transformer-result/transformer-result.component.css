@@ -1,0 +1,13 @@
+.mat-form-field-empty.mat-form-field-label {
+    background: green;
+    color:purple;
+}
+
+.mat-form-field-underline {
+    background-color: green;
+    color:blue;
+}
+
+::ng-deep .mat-form-field{
+    color:red
+}

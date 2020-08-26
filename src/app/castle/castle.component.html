@@ -1,0 +1,73 @@
+<div class="column mx-auto col-12">
+
+
+    <div class="card text-center border-danger col-10 p-3" style="padding-left: 30px;">
+        <div class="card-header">
+            <p><i class="fa fa-fort-awesome fa-3x" style="color:red"></i></p>
+            <h2>The Castle Company </h2>
+        </div>
+        <div class="card-body">
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                    <span class="input-group-text">Enter array for Peak/Valley</span>
+                </div>
+                <input type="text" class="form-control" [(ngModel)]="arrData" pattern="[0-9.,]+" aria-label="enter array in 1,2,3,4,">
+                <div class="input-group-append">
+                    <button type="button" (click)="Execute()" class="btn btn-info">Execute !</button>
+                </div>
+            </div>
+
+        </div>
+        <div class="card-footer text-muted">
+            <div class="alert alert-primary" role="alert">
+                {{lbResult}}
+            </div>
+            <div class="alert alert-success" *ngIf="(peak>0)" role="alert">
+                <span class="label label-danger">Peak </span>
+                <span class="badge badge-danger" style="font-size: medium;">{{peak}}</span>
+            </div>
+            <div class="alert alert-warning" *ngIf="(peak>0)" role="alert">
+                <span class="label label-warning">valley </span>
+                <span class="badge badge-danger" style="font-size: medium;">{{valley}} </span>
+            </div>
+        </div>
+    </div>
+    <div class="col-10">
+
+
+        <div id="accordion">
+            <div class="card">
+                <div class="card-header" id="headingOne">
+                    <h5 class="mb-0">
+                        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseOne"
+                            aria-expanded="true" aria-controls="collapseOne">
+                            Assignment 1: The Castle Company
+                        </button>
+                    </h5>
+                </div>
+
+                <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
+                    <div class="card-body">
+                        <div [innerHTML]="lbAssignment"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header" id="headingTwo">
+                    <h5 class="mb-0">
+                        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo"
+                            aria-expanded="false" aria-controls="collapseTwo">
+                            Outline:
+                        </button>
+                    </h5>
+                </div>
+                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+                    <div class="card-body">
+                        <div [innerHTML]="lbApproach"></div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>

@@ -1,0 +1,6 @@
+<h2><div class="alert alert-warning" role="alert">{{BotName}}</div></h2>
+<div *ngFor="let vital of Vitals | keyvalue" style="color: maroon;">
+    <span matBadge="{{vital.value}}" matBadgeColor="warn" matBadgeOverlap="false">{{vital.key|titlecase}}</span>
+    <mat-progress-bar mode="determinate" style="color: goldenrod;" value="{{vital.value*10}}"></mat-progress-bar>
+    <br/> 
+</div>
